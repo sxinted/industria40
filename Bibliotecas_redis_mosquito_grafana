@@ -1,0 +1,20 @@
+Instalar Mosquitto, que es un broker MQTT
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install -y mosquitto mosquitto-clients
+
+
+sudo systemctl enable mosquitto.service
+
+Ahora, vamos a instalar Grafana. 
+
+echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+curl https://packages.grafana.com/gpg.key | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install grafana
+
+
+Ahora, vamos a instalar Redis
+sudo apt-get install redis-server
+pip3 install redis
